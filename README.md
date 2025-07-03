@@ -10,7 +10,28 @@ Um MCP (Model Context Protocol) para integração com Jira Server auto-hospedado
 - Configuração simplificada via variáveis de ambiente
 - Compatível com o protocolo MCP do Cursor
 
-## Instalação
+## Instalação e Configuração
+
+### Método 1: Usando npx (Recomendado)
+
+1. Configure o MCP no arquivo `.cursor/mcp.json` do seu projeto:
+
+```json
+{
+  "mcpServers": {
+    "jira": {
+      "command": "npx",
+      "args": ["jira-server-mcp"],
+      "env": {
+        "JIRA_BASE_URL": "http://seu-jira-server:8080",
+        "JIRA_API_TOKEN": "seu-token-aqui"
+      }
+    }
+  }
+}
+```
+
+### Método 2: Clonando o Repositório
 
 1. Clone este repositório dentro da pasta `.cursor/mcp-jira` do seu projeto:
 
@@ -53,21 +74,29 @@ npm install
 
 ## Exemplos de Uso
 
-### Testar Conexão
+### Usando npx
 
 ```bash
+# Testar conexão
+npx jira-server-mcp test
+
+# Buscar Issue
+npx jira-server-mcp get-issue CLI-24238
+
+# Buscar com JQL
+npx jira-server-mcp search "project = CLI AND status = 'In Progress'"
+```
+
+### Usando o Repositório Local
+
+```bash
+# Testar conexão
 node src/index.js test
-```
 
-### Buscar Issue
-
-```bash
+# Buscar Issue
 node src/index.js get-issue CLI-24238
-```
 
-### Buscar com JQL
-
-```bash
+# Buscar com JQL
 node src/index.js search "project = CLI AND status = 'In Progress'"
 ```
 

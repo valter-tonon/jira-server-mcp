@@ -4,8 +4,12 @@
   "description": "MCP (Model Context Protocol) para integração com Jira Server auto-hospedado",
   "main": "src/index.js",
   "type": "module",
+  "bin": {
+    "jira-server-mcp": "./src/index.js"
+  },
   "scripts": {
-    "test": "node src/index.js test"
+    "test": "node src/index.js test",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +30,8 @@
   "homepage": "https://github.com/valter-tonon/jira-server-mcp#readme",
   "dependencies": {
     "node-fetch": "^3.3.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 } 
