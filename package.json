@@ -1,0 +1,30 @@
+{
+  "name": "jira-server-mcp",
+  "version": "1.0.0",
+  "description": "MCP (Model Context Protocol) para integração com Jira Server auto-hospedado",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node src/index.js test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valter-tonon/jira-server-mcp.git"
+  },
+  "keywords": [
+    "jira",
+    "server",
+    "mcp",
+    "cursor",
+    "ide"
+  ],
+  "author": "Valter Tonon <valter.tonon@climba.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valter-tonon/jira-server-mcp/issues"
+  },
+  "homepage": "https://github.com/valter-tonon/jira-server-mcp#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+} 
