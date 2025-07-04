@@ -1,6 +1,6 @@
 {
   "name": "jira-server-mcp",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "MCP (Model Context Protocol) para integração com Jira Server auto-hospedado. Uso principal via configuração MCP (mcp.json) para automações e integrações.",
   "main": "src/index.js",
   "type": "module",
